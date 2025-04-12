@@ -1,0 +1,36 @@
+name: test_action
+
+on:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
+
+jobs:
+  test-code:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        
+    - name: 執行程式語法檢查
+      run: |
+        node test-syntax.js
+        
+    - name: 執行測試案例
+      run: |
+        node run-tests.js
+        
+    - name: 完成通知
+      if: success()
+      run: echo "所有測試都通過了！"
+      
+    - name: 失敗通知
+      if: failure()
+      run: echo "測試失敗，請檢查錯誤信息。"
