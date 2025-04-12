@@ -5,7 +5,7 @@ This repository contains homework assignments for TSMC Cloud Native 2025 Trainin
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-ß
+
 ## Installation
 ```bash
 git clone https://github.com/yourusername/TSMC-Cloud-Native-2025_hw2.git
