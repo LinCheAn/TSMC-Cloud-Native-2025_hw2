@@ -2,7 +2,7 @@ name: test_action
 
 on:
   push:
-    branches: [ main, feature/* ]
+    branches: [ '*' ]  # all branch
   pull_request:
     branches: [ main ]
 
