@@ -2,9 +2,9 @@ name: test_action
 
 on:
   push:
-    branches: [ '*' ]  # all branch
+    branches: [ '*' ]
   pull_request:
-    branches: [ main ]
+    branches: [ '*' ]
 
 jobs:
   test-code:
